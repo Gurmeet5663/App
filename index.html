@@ -15,7 +15,7 @@
       .box{
         background-color: black;
         width: 300px;
-        height: 400px;
+        height: 500px;
         display: flex;
         flex-direction: column;
         border: 2px solid black;
@@ -23,23 +23,28 @@
 
       }
       button{
-        width: 41px;
-        height: 41px;
-        margin: 2px;
+        width: 60px;
+        height: 60px;
+        /* margin: 5px 5px; */
         border-radius: 50%;
-        margin: 10px;
+        margin: 5px 5px ;
         color: white;
         background-color: black;
+        color:cyan;
+        /* border: none;
+        box-shadow:0px 10px 16px 0 rgba(252, 252, 252, 0.2) ;        */
+        
+        
       }
       #input{
-        height: 60px;
+        height: 100px;
         background-color: black;
         color: white;
         border-style: none;
         font-size: 30px;
         border-bottom: 2px solid white;
         text-align: right;
-        
+
 
       }
       #main{
@@ -63,6 +68,7 @@
      p{
       display: inline;
       color: white;
+       width:90%;
      }
      .name{
 
@@ -74,16 +80,13 @@
   <body>
     <div class="header ">
       <button onclick="typeWriter()"></button>
-      <div style="display: inline; margin: auto;">
-        
-
-          <h1 style="display: inline;">GURMEET SINGH</h1>
-          
-        
-      </div>
+      <h1 style="display: inline; color: white;">    CALCULATER</h1>
+      <h6 style="display: inline; color: white;">by gurmeet singh</h6>
       <div class="name">
 
-        <p id="autotype"></p>
+        <p id="autotype">
+          
+        </p>
       </div>
     </div>
     <div id="main">
@@ -120,19 +123,18 @@
           <button>00</button>
           <button>0</button>
           <button>.</button>
-          <button>=</button>
+          <button style="background-color: orange;">=</button>
         </div>
       </div>
       </div>
-      
-      
-      
-      
+
+
+
+
       <!-- <script src="script.js"></script> -->
       <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script> -->
     </div>
     </body>
-    <script src="script.js"></script>
+    <script src="main.js"></script>
     </html>
-    
     
