@@ -2,96 +2,89 @@ let el = document.getElementById("input")
 //  el.value=7
 let buttons = document.querySelectorAll("button")
 let string = ""
-// let num= parseInt(String)
-// console.log(typeof num)
 // console.log(string.length)
 let arr = Array.from(buttons)
-arr.forEach(function(button){
+arr.forEach(button => {
     button.addEventListener("click", (e) => {
         // let value=document.getElementsByTagName("input").value
-       var y=string.length
-       var z=e.target.innerHTML
-        if (y == 0 && z == "%") {
+
+        if (string.length == 0 && e.target.innerHTML == "%") {
             el.value = null
 
         }
-        else if (y == 0 && z == "/") {
+        else if (string.length == 0 && e.target.innerHTML == "/") {
             el.value = null
 
         }
-        else if (y == 0 && z == "*") {
+        else if (string.length == 0 && e.target.innerHTML == "*") {
             el.value = null
 
         }
-        else if (y == 0 && z == "-") {
+        else if (string.length == 0 && e.target.innerHTML == "-") {
             el.value = null
 
         }
-        else if (y == 0 && z == "+") {
+        else if (string.length == 0 && e.target.innerHTML == "+") {
             el.value = null
 
         }
-        else if (string.length == 0 && z == "=") {
+        else if (string.length == 0 && e.target.innerHTML == "=") {
             el.value = null
 
         }
-        else if (y == 0 && z == "00") {
+        else if (string.length == 0 && e.target.innerHTML == "00") {
             el.value = 0
 
         }
-   
-        else if (string.length == 0 && z == "0") {
+
+        else if (string.length == 0 && e.target.innerHTML == "0") {
             el.value = 0
 
         }
-        else if (y == 0 && z == ".") {
+        else if (string.length == 0 && e.target.innerHTML == ".") {
             string = "0."
             el.value = string
 
         }
-        else if (y == 2 && z == ".") {
+        else if (string.length == 2 && e.target.innerHTML == ".") {
             // string="0."
             el.value = string
 
         }
-        else if (string[y-1] == "/" && z == "00") {
+        else if (string[string.length-1] == "/" && e.target.innerHTML == "00") {
             string+=0
             el.value = string
 
         }
-        else if (string[y-1] == "*" && z == "00") {
+        else if (string[string.length-1] == "*" && e.target.innerHTML == "00") {
             string+=0
             el.value = string
 
         }
-        else if (string[y-1] == "-" && z == "00") {
+        else if (string[string.length-1] == "-" && e.target.innerHTML == "00") {
             string+=0
             el.value = string
         }
-        else if (string[y-1] == "+" && z == "00") {
+        else if (string[string.length-1] == "+" && e.target.innerHTML == "00") {
             string+=0
             el.value = string
         }
-        // else if ((string[string.length-1] == "%"||[string.length-1] == "/"||[string.length-1] == "*"||[string.length-1] == "-"||[string.length-1] == "+"||[string.length-1] == ".") && (e.target.innerHTML == "+")) {
-        //     string+=
-        //     el.value = string
-        // }
-        else if (z == "=") {
+        else if (e.target.innerHTML == "=") {
             string = eval(string)
             el.value = string
         }
-        else if (z == "AC") {
+        else if (e.target.innerHTML == "AC") {
             string = ""
             el.value = string
         }
-        else if (z == "DEL") {
-            let x = y
+        else if (e.target.innerHTML == "DEL") {
+            let x = string.length
             x -= 1
             string = string.slice(0, x)
             el.value = string
         }
         else {
-            string += z
+            string += e.target.innerHTML
             el.value = string
         }
         // console.log(string.length)
